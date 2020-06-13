@@ -3,28 +3,20 @@
 #include "test_framework/generic_test.h"
 using std::vector;
 vector<int> PlusOne(vector<int> A) {
-  if( A.empty() )
-      return {};
 
-  auto const first = A.begin();
-  auto       last  = std::prev(A.end());
-  ++(*last);
-  auto carry = 0;
-  for(; first != last; --last)
+  ++A.back();
+  for(auto i = A.size() - 1; i > 0 && A[i] == 10; --i)
   {
-      *last += carry;
-      carry = *last / 10;
-      *last %= 10;
+      A[i] = 0;
+      ++A[i-1];
   }
 
-  *(A.begin()) += carry;
-  carry = *(A.begin()) / 10;
-  *(A.begin()) %= 10;
-
-  if( carry )
+  if(A[0] == 10)
   {
-      A.insert(A.begin(), carry);
+      A[0] = 0;
+      A.insert(A.begin(), 1);
   }
+
   return A;
 }
 
