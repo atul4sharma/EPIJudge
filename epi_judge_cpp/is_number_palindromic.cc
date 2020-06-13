@@ -1,7 +1,19 @@
 #include "test_framework/generic_test.h"
+
+long long Reverse(int x) {
+  long long result = 0;
+  auto x_ = std::abs(x);
+  while(x_){
+      result = (result * 10) + (x_ % 10);
+      x_ /= 10;
+  }
+  return x < 0 ? -1 * result : result;
+}
+
 bool IsPalindromeNumber(int x) {
-  // TODO - you fill in here.
-  return true;
+  if( x < 0 )
+      return false;
+  return x == Reverse(x);
 }
 
 int main(int argc, char* argv[]) {

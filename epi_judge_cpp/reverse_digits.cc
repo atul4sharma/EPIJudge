@@ -1,4 +1,5 @@
 #include "test_framework/generic_test.h"
+
 long long Reverse(int x) {
   long long result = 0;
   auto x_ = std::abs(x);
