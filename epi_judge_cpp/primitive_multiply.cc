@@ -1,7 +1,18 @@
 #include "test_framework/generic_test.h"
+
+unsigned long long add(unsigned long long x, unsigned long long y) {
+    return y == 0 ? x : add( x ^ y, (x & y) << 1);
+}
+
 unsigned long long Multiply(unsigned long long x, unsigned long long y) {
-  // TODO - you fill in here.
-  return 0;
+  unsigned long long sum = 0;
+  while(x)
+  {
+      if( x & 1 )
+          sum = add(sum, y);
+      x >>= 1; y <<= 1;
+  }
+  return sum;
 }
 
 int main(int argc, char* argv[]) {
