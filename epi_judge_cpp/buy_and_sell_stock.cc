@@ -2,9 +2,32 @@
 
 #include "test_framework/generic_test.h"
 using std::vector;
+
+auto max_profit(std::vector<double> const & diffs)
+{
+    auto best_sum    = std::numeric_limits<double>::min();
+    auto current_sum = static_cast<double>(0);
+    for( auto const & i : diffs)
+    {
+        current_sum = std::max(double{0}, current_sum + i);
+        best_sum    = std::max(best_sum, current_sum);
+    }
+    return best_sum;
+}
+
+auto buy_and_sell_stock_once_impl(std::vector<double> const & prices)
+{
+    auto diffs = std::vector<double>{};
+    std::adjacent_difference(prices.begin()
+                            ,prices.end()
+                            ,std::back_inserter(diffs));
+    diffs.front() = 0;
+    return max_profit(diffs);
+}
+
 double BuyAndSellStockOnce(const vector<double>& prices) {
-  // TODO - you fill in here.
-  return 0.0;
+
+  return buy_and_sell_stock_once_impl(prices);
 }
 
 int main(int argc, char* argv[]) {
