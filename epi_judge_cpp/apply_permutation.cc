@@ -3,8 +3,21 @@
 #include "test_framework/generic_test.h"
 using std::vector;
 void ApplyPermutation(vector<int> perm, vector<int>* A_ptr) {
-  // TODO - you fill in here.
-  return;
+    auto       & a = *A_ptr;
+    auto const   n = perm.size();
+    for(int i = 0; i < perm.size(); ++i)
+    {
+        int next = i;
+        while(perm[next] >= 0)
+        {
+            std::swap(a[i], a[perm[next]]);
+            auto temp   = perm[next];
+            perm[next] -= n;
+            next        = temp;
+        }
+    }
+
+    return;
 }
 vector<int> ApplyPermutationWrapper(const vector<int>& perm, vector<int> A) {
   ApplyPermutation(perm, &A);
