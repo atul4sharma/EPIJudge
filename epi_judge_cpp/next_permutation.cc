@@ -3,8 +3,9 @@
 #include "test_framework/generic_test.h"
 using std::vector;
 vector<int> NextPermutation(vector<int> perm) {
-  // TODO - you fill in here.
-  return {};
+  return std::next_permutation(perm.begin(), perm.end())
+         ? perm
+         : std::vector<int>{};
 }
 
 int main(int argc, char* argv[]) {
