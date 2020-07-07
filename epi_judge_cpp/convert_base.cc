@@ -38,21 +38,11 @@ auto to_base_10(std::string const & num_as_string, int from_b)
 {
     if( num_as_string.empty() )
         return 0;
-    auto power_of_b = 0;
-#if 1
-    auto const num = std::accumulate(num_as_string.rbegin()
-                                    ,num_as_string.rend()
-                                    ,int{0}
-                                    ,[&from_b, &power_of_b] (int x, char a) {
-                                         return x + (std::pow(from_b, power_of_b++) * string_to_int_mappings.at(std::string{a}));
-                                    });
-#else
     auto num = 0;
-    for( int i = num_as_string.size() - 1; i >= 0; --i)
+    for(char c : num_as_string)
     {
-        num += std::pow(from_b, power_of_b++) * string_to_int_mappings.at(std::string{num_as_string[i]});
+        num = (num * from_b) + string_to_int_mappings.at(std::string{c});
     }
-#endif 
     return num;
 }
 

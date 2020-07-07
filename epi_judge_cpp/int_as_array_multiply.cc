@@ -117,12 +117,12 @@ auto multiply_impl(std::vector<int> const & num1, std::vector<int> const & num2)
 // TODO: Can be improved
 vector<int> Multiply(vector<int> num1, vector<int> num2) {
 
-  auto resulting_sign = (num1.front() * num2.front()) > 0;
+  auto positive_resulting_sign = (num1.front() * num2.front()) > 0;
   num1.front() = std::abs(num1.front());
   num2.front() = std::abs(num2.front());
 
   auto result = multiply_impl(num1, num2);
-  if( ! resulting_sign )
+  if( ! positive_resulting_sign )
       result.front() = -1 * result.front();
   return result;
 }
