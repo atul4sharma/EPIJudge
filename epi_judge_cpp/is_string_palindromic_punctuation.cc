@@ -3,7 +3,22 @@
 #include "test_framework/generic_test.h"
 using std::string;
 bool IsPalindrome(const string& s) {
-  // TODO - you fill in here.
+  auto first = 0;
+  auto last  = static_cast<int>(s.size()) - 1;
+  auto result = true;
+  while( first < last )
+  {
+      while( ! std::isalnum(s[first]) and (first < last) )
+          ++first;
+
+      while( ! std::isalnum(s[last]) and (first < last) )
+          --last;
+
+      if( std::tolower(s[first]) != std::tolower(s[last]) )
+          return false;
+
+      ++first; --last;
+  }
   return true;
 }
 
