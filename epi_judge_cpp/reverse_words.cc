@@ -5,7 +5,24 @@
 using std::string;
 
 void ReverseWords(string* s) {
-  // TODO - you fill in here.
+  std::string & res = *s;
+  std::reverse(res.begin(), res.end());
+  auto first = res.begin();
+  auto last  = res.end();
+  while(first != last)
+  {
+      auto next_space = std::find_if(first
+                                    ,last
+                                    ,[] (char const ch) {
+                                        return std::isspace(ch);
+                                    });
+      std::reverse(first, next_space);
+      first = std::find_if_not(next_space
+                              ,last
+                              ,[] (char const ch) {
+                                  return std::isspace(ch);
+                              });
+  }
   return;
 }
 string ReverseWordsWrapper(TimedExecutor& executor, string s) {
