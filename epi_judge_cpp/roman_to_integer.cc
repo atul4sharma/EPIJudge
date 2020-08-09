@@ -2,9 +2,36 @@
 
 #include "test_framework/generic_test.h"
 using std::string;
+
+auto roman_to_integer_impl(std::string const & s)
+    -> int
+{
+    auto const mapping = std::map<char, int>{
+                                             {'I', 1}
+                                            ,{'V', 5}
+                                            ,{'X', 10}
+                                            ,{'L', 50}
+                                            ,{'C', 100}
+                                            ,{'D', 500}
+                                            ,{'M', 1000}
+                                            };
+    auto result = int{};
+    auto prev_value = std::numeric_limits<int>::min();
+    auto curr_value = int{};
+    for( auto i = static_cast<int>(s.size()) - 1; i >= 0; --i)
+    {
+        curr_value = mapping.at(s[i]);
+        if( curr_value >= prev_value )
+            result += curr_value;
+        else
+            result -= curr_value;
+        prev_value = curr_value;
+    }
+    return result;
+}
+
 int RomanToInteger(const string& s) {
-  // TODO - you fill in here.
-  return 0;
+  return roman_to_integer_impl(s);
 }
 
 int main(int argc, char* argv[]) {
