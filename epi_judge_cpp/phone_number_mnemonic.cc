@@ -12,6 +12,7 @@ auto phone_numbers_impl(std::string                       const & number
                        ,std::vector<std::string>          const & till_now)
     -> std::vector<std::string>
 {
+    // TODO: better approach in solutions
     if( current_index >= size )
         return till_now;
 

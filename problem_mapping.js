@@ -65,7 +65,7 @@ problem_mapping = {
                 "passed": 0,
                 "total": 10000
             },
-            "Python: closest_int_same_weight.py": { 
+            "Python: closest_int_same_weight.py": {
                 "passed": 0,
                 "total": 10000
             }
@@ -538,7 +538,7 @@ problem_mapping = {
         },
         "6.05 Test palindromicity": {
             "C++: is_string_palindromic_punctuation.cc": {
-                "passed": 0,
+                "passed": 305,
                 "total": 305
             },
             "Java: IsStringPalindromicPunctuation.java": {
@@ -552,7 +552,7 @@ problem_mapping = {
         },
         "6.06 Reverse all the words in a sentence": {
             "C++: reverse_words.cc": {
-                "passed": 0,
+                "passed": 103,
                 "total": 103
             },
             "Java: ReverseWords.java": {
@@ -1456,7 +1456,7 @@ problem_mapping = {
         },
         "12.01 Test for palindromic permutations": {
             "C++: is_string_permutable_to_palindrome.cc": {
-                "passed": 0,
+                "passed": 4,
                 "total": 305
             },
             "Java: IsStringPermutableToPalindrome.java": {
@@ -1980,7 +1980,7 @@ problem_mapping = {
         },
         "15.02 Compute all mnemonics for a phone number": {
             "C++: phone_number_mnemonic.cc": {
-                "passed": 0,
+                "passed": 102,
                 "total": 102
             },
             "Java: PhoneNumberMnemonic.java": {
