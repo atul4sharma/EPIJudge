@@ -21,10 +21,10 @@ auto roman_to_integer_impl(std::string const & s)
     for( auto i = static_cast<int>(s.size()) - 1; i >= 0; --i)
     {
         curr_value = mapping.at(s[i]);
-        if( curr_value >= prev_value )
-            result += curr_value;
-        else
+        if( curr_value < prev_value )
             result -= curr_value;
+        else
+            result += curr_value;
         prev_value = curr_value;
     }
     return result;
