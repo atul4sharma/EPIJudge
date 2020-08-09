@@ -3,9 +3,34 @@
 #include "test_framework/generic_test.h"
 using std::string;
 
+auto next_number(std::string const & s)
+    -> std::string
+{
+    auto       first = s.begin();
+    auto const last  = s.end();
+    auto       temp  = std::string{};
+    while(first != last)
+    {
+        auto const character = *first;
+        auto const next_char = std::find_if(first
+                                           ,last
+                                           ,[&character] (char const ch) {
+                                                return ch != character;
+                                           });
+
+        auto count = std::distance(first
+                                  ,next_char);
+        temp += std::to_string(count) + std::string{character};
+        first = next_char;
+    }
+    return temp;
+}
+
 string LookAndSay(int n) {
-  // TODO - you fill in here.
-  return "";
+  auto result = std::string{"1"};
+  for( auto i = 1; i < n; ++i )
+      result = next_number(result);
+  return result;
 }
 
 int main(int argc, char* argv[]) {
