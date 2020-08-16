@@ -2,7 +2,7 @@ problem_mapping = {
     "Chapter 04: Primitive Types": {
         "4.00 Bootcamp: Primitive Types": {
             "C++: count_bits.cc": {
-                "passed": 0,
+                "passed": 1,
                 "total": 10001
             },
             "Java: CountBits.java": {
@@ -16,7 +16,7 @@ problem_mapping = {
         },
         "4.01 Computing the parity of a word": {
             "C++: parity.cc": {
-                "passed": 0,
+                "passed": 10000,
                 "total": 10000
             },
             "Java: Parity.java": {
@@ -30,7 +30,7 @@ problem_mapping = {
         },
         "4.02 Swap bits": {
             "C++: swap_bits.cc": {
-                "passed": 0,
+                "passed": 10001,
                 "total": 10001
             },
             "Java: SwapBits.java": {
@@ -44,7 +44,7 @@ problem_mapping = {
         },
         "4.03 Reverse bits": {
             "C++: reverse_bits.cc": {
-                "passed": 0,
+                "passed": 10000,
                 "total": 10000
             },
             "Java: ReverseBits.java": {
@@ -58,7 +58,7 @@ problem_mapping = {
         },
         "4.04 Find a closest integer with the same weight": {
             "C++: closest_int_same_weight.cc": {
-                "passed": 0,
+                "passed": 10000,
                 "total": 10000
             },
             "Java: ClosestIntSameWeight.java": {
@@ -72,7 +72,7 @@ problem_mapping = {
         },
         "4.05 Compute product without arithmetical operators": {
             "C++: primitive_multiply.cc": {
-                "passed": 0,
+                "passed": 10006,
                 "total": 10006
             },
             "Java: PrimitiveMultiply.java": {
@@ -114,7 +114,7 @@ problem_mapping = {
         },
         "4.08 Reverse digits": {
             "C++: reverse_digits.cc": {
-                "passed": 0,
+                "passed": 19952,
                 "total": 19952
             },
             "Java: ReverseDigits.java": {
@@ -128,7 +128,7 @@ problem_mapping = {
         },
         "4.09 Check if a decimal integer is a palindrome": {
             "C++: is_number_palindromic.cc": {
-                "passed": 0,
+                "passed": 20000,
                 "total": 20000
             },
             "Java: IsNumberPalindromic.java": {
@@ -186,7 +186,7 @@ problem_mapping = {
         },
         "5.01 The Dutch national flag problem": {
             "C++: dutch_national_flag.cc": {
-                "passed": 0,
+                "passed": 204,
                 "total": 204
             },
             "Java: DutchNationalFlag.java": {
@@ -214,7 +214,7 @@ problem_mapping = {
         },
         "5.03 Multiply two arbitrary-precision integers": {
             "C++: int_as_array_multiply.cc": {
-                "passed": 0,
+                "passed": 1000,
                 "total": 1000
             },
             "Java: IntAsArrayMultiply.java": {
@@ -228,7 +228,7 @@ problem_mapping = {
         },
         "5.04 Advancing through an array": {
             "C++: advance_by_offsets.cc": {
-                "passed": 0,
+                "passed": 1,
                 "total": 2004
             },
             "Java: AdvanceByOffsets.java": {
@@ -256,7 +256,7 @@ problem_mapping = {
         },
         "5.06 Buy and sell a stock once": {
             "C++: buy_and_sell_stock.cc": {
-                "passed": 0,
+                "passed": 402,
                 "total": 402
             },
             "Java: BuyAndSellStock.java": {
@@ -298,7 +298,7 @@ problem_mapping = {
         },
         "5.09 Enumerate all primes to n": {
             "C++: prime_sieve.cc": {
-                "passed": 0,
+                "passed": 24,
                 "total": 24
             },
             "Java: PrimeSieve.java": {
@@ -312,7 +312,7 @@ problem_mapping = {
         },
         "5.10 Permute the elements of an array": {
             "C++: apply_permutation.cc": {
-                "passed": 0,
+                "passed": 101,
                 "total": 101
             },
             "Java: ApplyPermutation.java": {
@@ -326,7 +326,7 @@ problem_mapping = {
         },
         "5.11 Compute the next permutation": {
             "C++: next_permutation.cc": {
-                "passed": 0,
+                "passed": 2001,
                 "total": 2001
             },
             "Java: NextPermutation.java": {
@@ -368,7 +368,7 @@ problem_mapping = {
         },
         "5.14 Compute a random permutation": {
             "C++: random_permutation.cc": {
-                "passed": 0,
+                "passed": 1,
                 "total": 6
             },
             "Java: RandomPermutation.java": {
@@ -424,7 +424,7 @@ problem_mapping = {
         },
         "5.18 Compute the spiral ordering of a 2D array": {
             "C++: spiral_ordering.cc": {
-                "passed": 0,
+                "passed": 1,
                 "total": 51
             },
             "Java: SpiralOrdering.java": {
@@ -438,7 +438,7 @@ problem_mapping = {
         },
         "5.19 Rotate a 2D array": {
             "C++: matrix_rotation.cc": {
-                "passed": 0,
+                "passed": 2,
                 "total": 51
             },
             "Java: MatrixRotation.java": {
@@ -452,7 +452,7 @@ problem_mapping = {
         },
         "5.20 Compute rows in Pascal's Triangle": {
             "C++: pascal_triangle.cc": {
-                "passed": 0,
+                "passed": 1,
                 "total": 35
             },
             "Java: PascalTriangle.java": {
@@ -482,7 +482,7 @@ problem_mapping = {
         },
         "6.01 Interconvert strings and integers": {
             "C++: string_integer_interconversion.cc": {
-                "passed": 0,
+                "passed": 15002,
                 "total": 15002
             },
             "Java: StringIntegerInterconversion.java": {
@@ -496,7 +496,7 @@ problem_mapping = {
         },
         "6.02 Base conversion": {
             "C++: convert_base.cc": {
-                "passed": 0,
+                "passed": 20001,
                 "total": 20001
             },
             "Java: ConvertBase.java": {
@@ -510,7 +510,7 @@ problem_mapping = {
         },
         "6.03 Compute the spreadsheet column encoding": {
             "C++: spreadsheet_encoding.cc": {
-                "passed": 0,
+                "passed": 10000,
                 "total": 10000
             },
             "Java: SpreadsheetEncoding.java": {
@@ -608,7 +608,7 @@ problem_mapping = {
         },
         "6.10 Write a string sinusoidally": {
             "C++: snake_string.cc": {
-                "passed": 0,
+                "passed": 500,
                 "total": 500
             },
             "Java: SnakeString.java": {
@@ -622,7 +622,7 @@ problem_mapping = {
         },
         "6.11 Implement run-length encoding": {
             "C++: run_length_compression.cc": {
-                "passed": 0,
+                "passed": 200,
                 "total": 200
             },
             "Java: RunLengthCompression.java": {
@@ -652,7 +652,7 @@ problem_mapping = {
     "Chapter 07: Linked Lists": {
         "7.00 Bootcamp: Linked Lists": {
             "C++: delete_from_list.cc": {
-                "passed": 0,
+                "passed": 457,
                 "total": 457
             },
             "C++: insert_in_list.cc": {
@@ -690,7 +690,7 @@ problem_mapping = {
         },
         "7.01 Merge two sorted lists": {
             "C++: sorted_lists_merge.cc": {
-                "passed": 0,
+                "passed": 501,
                 "total": 501
             },
             "Java: SortedListsMerge.java": {
