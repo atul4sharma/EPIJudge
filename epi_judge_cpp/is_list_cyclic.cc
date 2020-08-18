@@ -7,7 +7,19 @@
 using std::shared_ptr;
 
 shared_ptr<ListNode<int>> HasCycle(const shared_ptr<ListNode<int>>& head) {
-  // TODO - you fill in here.
+  auto single_iter = head;
+  auto double_iter = head;
+
+  while( double_iter != nullptr
+         &&
+         double_iter->next != nullptr )
+  {
+      single_iter = single_iter->next;
+      double_iter = double_iter->next->next;
+      if( single_iter == double_iter )
+          return single_iter;
+  }
+
   return nullptr;
 }
 void HasCycleWrapper(TimedExecutor& executor,
