@@ -1,8 +1,13 @@
 #include "test_framework/generic_test.h"
 
 short CountBits(unsigned int x) {
-  // TODO - you fill in here.
-  return 0;
+    short number_of_bits = 0;
+    while(x)
+    {
+        number_of_bits += x & 1;
+        x >>= 1;
+    }
+    return number_of_bits;
 }
 
 int main(int argc, char* argv[]) {
