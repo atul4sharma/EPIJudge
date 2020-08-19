@@ -11,9 +11,9 @@ vector<int> PlusOne(vector<int> A) {
       ++A[i-1];
   }
 
-  if(A[0] == 10)
+  if(A.front() == 10)
   {
-      A[0] = 0;
+      A.front() = 0;
       A.insert(A.begin(), 1);
   }
 
