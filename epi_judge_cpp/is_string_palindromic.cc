@@ -3,7 +3,11 @@
 #include "test_framework/generic_test.h"
 using std::string;
 bool IsPalindromic(const string& s) {
-  // TODO - you fill in here.
+  for(auto i = 0, j = static_cast<int>(s.size())-1; i < j; ++i, --j)
+  {
+      if(s[i] != s[j])
+          return false;
+  }
   return true;
 }
 
