@@ -7,7 +7,12 @@
 using std::vector;
 
 void EvenOdd(vector<int>* A_ptr) {
-  // TODO - you fill in here.
+  auto & v = *A_ptr;
+  std::partition(v.begin()
+                ,v.end()
+                ,[] (int const num) {
+                    return num % 2 == 0;
+                });
   return;
 }
 void EvenOddWrapper(TimedExecutor& executor, vector<int> A) {
