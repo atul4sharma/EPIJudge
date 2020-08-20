@@ -7,9 +7,31 @@
 using std::string;
 using std::vector;
 
+auto shift_forward(char s[], int start, int & end)
+{
+    for(auto i = end; i > start; --i)
+    {
+        s[i] = s[i-1];
+    }
+    s[start] = 'd';
+    ++end;
+}
+
+
 int ReplaceAndRemove(int size, char s[]) {
-  // TODO - you fill in here.
-  return 0;
+    // TODO : Can be improved
+  auto current_end = static_cast<int>(std::distance(s, std::remove(s, s+size, 'b')));
+
+  for(auto i = 0; i < current_end; ++i)
+  {
+    if(s[i] == 'a')
+    {
+        s[i] = 'd';
+        shift_forward(s, i+1, current_end);
+    }
+  }
+
+  return current_end;
 }
 vector<string> ReplaceAndRemoveWrapper(TimedExecutor& executor, int size,
                                        const vector<string>& s) {
