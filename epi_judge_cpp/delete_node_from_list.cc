@@ -4,7 +4,9 @@
 
 // Assumes node_to_delete is not tail.
 void DeletionFromList(const shared_ptr<ListNode<int>>& node_to_delete) {
-  // TODO - you fill in here.
+    auto next_node = node_to_delete->next;
+  node_to_delete->data = next_node->data;
+  node_to_delete->next = next_node->next;
   return;
 }
 shared_ptr<ListNode<int>> DeletionFromListWrapper(
