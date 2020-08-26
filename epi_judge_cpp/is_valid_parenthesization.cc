@@ -3,8 +3,34 @@
 #include "test_framework/generic_test.h"
 using std::string;
 bool IsWellFormed(const string& s) {
-  // TODO - you fill in here.
-  return true;
+  std::stack<char> container;
+
+  for(auto i = 0; i < static_cast<int>(s.size()); ++i)
+  {
+      if( container.empty() )
+      {
+          container.emplace(s[i]);
+      }
+      else
+      {
+          auto prev_char = container.top();
+          if( (s[i] == '}' && prev_char == '{')
+              ||
+              (s[i] == ')' && prev_char == '(')
+              ||
+              (s[i] == ']' && prev_char == '[')
+            )
+          {
+              container.pop();
+          }
+          else
+          {
+              container.emplace(s[i]);
+          }
+      }
+  }
+
+  return container.empty();
 }
 
 int main(int argc, char* argv[]) {
