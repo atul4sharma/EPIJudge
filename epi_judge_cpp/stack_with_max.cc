@@ -6,23 +6,43 @@
 using std::length_error;
 
 class Stack {
+
+    struct element{
+        int const data;
+        int const max;
+
+        element(int d, int m)
+            :data(std::move(d))
+            ,max(std::move(m))
+        {}
+
+    };
+
+    std::stack<element> underlying_container;
+
  public:
   bool Empty() const {
-    // TODO - you fill in here.
-    return true;
+    return underlying_container.empty();
   }
+
   int Max() const {
-    // TODO - you fill in here.
-    return 0;
+    return underlying_container.top().max;
   }
+
   int Pop() {
-    // TODO - you fill in here.
-    return 0;
+    auto const return_value = underlying_container.top().data;
+    underlying_container.pop();
+    return return_value;
   }
+
   void Push(int x) {
-    // TODO - you fill in here.
+    if( underlying_container.empty() )
+        underlying_container.emplace(x, x);
+    else
+        underlying_container.emplace(x, x > underlying_container.top().max ? x : underlying_container.top().max);
     return;
   }
+
 };
 struct StackOp {
   std::string op;
