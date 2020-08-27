@@ -3,8 +3,31 @@
 #include "test_framework/generic_test.h"
 using std::vector;
 vector<int> MatrixInSpiralOrder(const vector<vector<int>>& square_matrix) {
-  // TODO - you fill in here.
-  return {};
+    auto result = std::vector<int>{};
+    result.reserve(square_matrix.size() * square_matrix.size());
+    for(auto i = 0, j = static_cast<int>(square_matrix.size()) - 1
+       ;i <= j
+       ;++i, --j)
+    {
+        if( i == j )
+        {
+            result.emplace_back(square_matrix[i][j]);
+            break;
+        }
+
+        for(auto k = i; k <= j - 1; ++k)
+            result.emplace_back(square_matrix[i][k]);
+
+        for(auto k = i; k <= j - 1; ++k)
+            result.emplace_back(square_matrix[k][j]);
+
+        for(auto k = j; k >= i + 1; --k)
+            result.emplace_back(square_matrix[j][k]);
+
+        for(auto k = j; k >= i + 1; --k)
+            result.emplace_back(square_matrix[k][i]);
+    }
+    return result;
 }
 
 int main(int argc, char* argv[]) {
