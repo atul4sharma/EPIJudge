@@ -4,20 +4,26 @@
 #include "test_framework/serialization_traits.h"
 #include "test_framework/test_failure.h"
 using std::length_error;
+#include <list>
 
 class QueueWithMax {
+    std::list<int> data_;
  public:
   void Enqueue(int x) {
-    // TODO - you fill in here.
+    data_.emplace_back(x);
     return;
   }
   int Dequeue() {
-    // TODO - you fill in here.
-    return 0;
+      if( data_.empty() )
+          throw std::length_error("Out of bound");
+      auto const result = data_.front();
+      data_.pop_front();
+      return result;
   }
   int Max() const {
-    // TODO - you fill in here.
-    return 0;
+    if( data_.empty() )
+        throw std::length_error("Out of bound");
+    return *(std::max_element(data_.begin(), data_.end()));
   }
 };
 struct QueueOp {
