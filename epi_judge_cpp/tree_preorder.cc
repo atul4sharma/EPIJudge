@@ -7,8 +7,8 @@ using std::vector;
 auto preorder_traversal_impl(std::unique_ptr<BinaryTreeNode<int>> const & tree)
     -> std::vector<int>
 {
-    auto         result = std::vector<int>{};
-    auto         s      = std::stack<BinaryTreeNode<int> const *>{};
+    auto result = std::vector<int>{};
+    auto s      = std::stack<BinaryTreeNode<int> const *>{};
     s.emplace(tree.get());
 
     while(!s.empty())
