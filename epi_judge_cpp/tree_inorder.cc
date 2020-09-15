@@ -26,11 +26,11 @@ auto inorder_traversal_impl(std::unique_ptr<BinaryTreeNode<int>> const & node)
 auto inorder_traversal_impl(std::unique_ptr<BinaryTreeNode<int>> const & node)
     -> std::vector<int>
 {
-    auto s = std::stack<const BinaryTreeNode<int>*>{};
-    auto const * curr = node.get();
-    auto result = std::vector<int>{};
+    auto         s      = std::stack<const BinaryTreeNode<int>*>{};
+    auto         result = std::vector<int>{};
+    auto const * curr   = node.get();
 
-    while(!s.empty() || curr )
+    while(!s.empty() || curr)
     {
         if(curr)
         {
@@ -40,12 +40,11 @@ auto inorder_traversal_impl(std::unique_ptr<BinaryTreeNode<int>> const & node)
         else
         {
             curr = s.top();
-            s.pop();
             result.emplace_back(curr->data);
+            s.pop();
             curr = curr->right.get();
         }
     }
-
     return result;
 }
 

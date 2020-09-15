@@ -2,7 +2,7 @@ problem_mapping = {
     "Chapter 04: Primitive Types": {
         "4.00 Bootcamp: Primitive Types": {
             "C++: count_bits.cc": {
-                "passed": 1,
+                "passed": 10001,
                 "total": 10001
             },
             "Java: CountBits.java": {
@@ -172,7 +172,7 @@ problem_mapping = {
     "Chapter 05: Arrays": {
         "5.00 Bootcamp: Arrays": {
             "C++: even_odd_array.cc": {
-                "passed": 0,
+                "passed": 1001,
                 "total": 1001
             },
             "Java: EvenOddArray.java": {
@@ -200,7 +200,7 @@ problem_mapping = {
         },
         "5.02 Increment an arbitrary-precision integer": {
             "C++: int_as_array_increment.cc": {
-                "passed": 0,
+                "passed": 505,
                 "total": 505
             },
             "Java: IntAsArrayIncrement.java": {
@@ -228,7 +228,7 @@ problem_mapping = {
         },
         "5.04 Advancing through an array": {
             "C++: advance_by_offsets.cc": {
-                "passed": 1,
+                "passed": 0,
                 "total": 2004
             },
             "Java: AdvanceByOffsets.java": {
@@ -242,7 +242,7 @@ problem_mapping = {
         },
         "5.05 Delete duplicates from a sorted array": {
             "C++: sorted_array_remove_dups.cc": {
-                "passed": 0,
+                "passed": 2003,
                 "total": 2003
             },
             "Java: SortedArrayRemoveDups.java": {
@@ -424,7 +424,7 @@ problem_mapping = {
         },
         "5.18 Compute the spiral ordering of a 2D array": {
             "C++: spiral_ordering.cc": {
-                "passed": 1,
+                "passed": 51,
                 "total": 51
             },
             "Java: SpiralOrdering.java": {
@@ -452,7 +452,7 @@ problem_mapping = {
         },
         "5.20 Compute rows in Pascal's Triangle": {
             "C++: pascal_triangle.cc": {
-                "passed": 1,
+                "passed": 35,
                 "total": 35
             },
             "Java: PascalTriangle.java": {
@@ -468,7 +468,7 @@ problem_mapping = {
     "Chapter 06: Strings": {
         "6.00 Bootcamp: Strings": {
             "C++: is_string_palindromic.cc": {
-                "passed": 0,
+                "passed": 10000,
                 "total": 10000
             },
             "Java: IsStringPalindromic.java": {
@@ -524,7 +524,7 @@ problem_mapping = {
         },
         "6.04 Replace and remove": {
             "C++: replace_and_remove.cc": {
-                "passed": 0,
+                "passed": 501,
                 "total": 501
             },
             "Java: ReplaceAndRemove.java": {
@@ -704,7 +704,7 @@ problem_mapping = {
         },
         "7.02 Reverse a single sublist": {
             "C++: reverse_sublist.cc": {
-                "passed": 0,
+                "passed": 210,
                 "total": 210
             },
             "Java: ReverseSublist.java": {
@@ -718,7 +718,7 @@ problem_mapping = {
         },
         "7.03 Test for cyclicity": {
             "C++: is_list_cyclic.cc": {
-                "passed": 0,
+                "passed": 102,
                 "total": 102
             },
             "Java: IsListCyclic.java": {
@@ -732,7 +732,7 @@ problem_mapping = {
         },
         "7.04 Test for overlapping lists---lists are cycle-free": {
             "C++: do_terminated_lists_overlap.cc": {
-                "passed": 0,
+                "passed": 106,
                 "total": 106
             },
             "Java: DoTerminatedListsOverlap.java": {
@@ -760,7 +760,7 @@ problem_mapping = {
         },
         "7.06 Delete a node from a singly linked list": {
             "C++: delete_node_from_list.cc": {
-                "passed": 0,
+                "passed": 512,
                 "total": 512
             },
             "Java: DeleteNodeFromList.java": {
@@ -788,7 +788,7 @@ problem_mapping = {
         },
         "7.08 Remove duplicates from a sorted list": {
             "C++: remove_duplicates_from_sorted_list.cc": {
-                "passed": 0,
+                "passed": 203,
                 "total": 203
             },
             "Java: RemoveDuplicatesFromSortedList.java": {
@@ -802,7 +802,7 @@ problem_mapping = {
         },
         "7.09 Implement cyclic right shift for singly linked lists": {
             "C++: list_cyclic_right_shift.cc": {
-                "passed": 0,
+                "passed": 507,
                 "total": 507
             },
             "Java: ListCyclicRightShift.java": {
@@ -816,7 +816,7 @@ problem_mapping = {
         },
         "7.10 Implement even-odd merge": {
             "C++: even_odd_list_merge.cc": {
-                "passed": 0,
+                "passed": 1015,
                 "total": 1015
             },
             "Java: EvenOddListMerge.java": {
@@ -844,7 +844,7 @@ problem_mapping = {
         },
         "7.12 Implement list pivoting": {
             "C++: pivot_list.cc": {
-                "passed": 0,
+                "passed": 4,
                 "total": 208
             },
             "Java: PivotList.java": {
@@ -874,7 +874,7 @@ problem_mapping = {
     "Chapter 08: Stacks and Queues": {
         "8.01 Implement a stack with max API": {
             "C++: stack_with_max.cc": {
-                "passed": 0,
+                "passed": 101,
                 "total": 101
             },
             "Java: StackWithMax.java": {
@@ -902,7 +902,7 @@ problem_mapping = {
         },
         "8.03 Is a string well-formed?": {
             "C++: is_valid_parenthesization.cc": {
-                "passed": 0,
+                "passed": 78,
                 "total": 78
             },
             "Java: IsValidParenthesization.java": {
@@ -916,7 +916,7 @@ problem_mapping = {
         },
         "8.04 Normalize pathnames": {
             "C++: directory_path_normalization.cc": {
-                "passed": 0,
+                "passed": 2,
                 "total": 255
             },
             "Java: DirectoryPathNormalization.java": {
@@ -986,7 +986,7 @@ problem_mapping = {
         },
         "8.09 Implement a queue with max API": {
             "C++: queue_with_max.cc": {
-                "passed": 0,
+                "passed": 201,
                 "total": 201
             },
             "Java: QueueWithMax.java": {
@@ -1002,7 +1002,7 @@ problem_mapping = {
     "Chapter 09: Binary Trees": {
         "9.01 Test if a binary tree is height-balanced": {
             "C++: is_tree_balanced.cc": {
-                "passed": 0,
+                "passed": 3852,
                 "total": 3852
             },
             "Java: IsTreeBalanced.java": {
@@ -1030,7 +1030,7 @@ problem_mapping = {
         },
         "9.03 Compute the lowest common ancestor in a binary tree": {
             "C++: lowest_common_ancestor.cc": {
-                "passed": 0,
+                "passed": 4,
                 "total": 948
             },
             "Java: LowestCommonAncestor.java": {
@@ -1058,7 +1058,7 @@ problem_mapping = {
         },
         "9.05 Sum the root-to-leaf paths in a binary tree": {
             "C++: sum_root_to_leaf.cc": {
-                "passed": 0,
+                "passed": 3849,
                 "total": 3849
             },
             "Java: SumRootToLeaf.java": {
@@ -1086,7 +1086,7 @@ problem_mapping = {
         },
         "9.07 Implement an inorder traversal without recursion": {
             "C++: tree_inorder.cc": {
-                "passed": 0,
+                "passed": 3852,
                 "total": 3852
             },
             "Java: TreeInorder.java": {
@@ -2092,7 +2092,7 @@ problem_mapping = {
         },
         "15.10 Implement a Sudoku solver": {
             "C++: sudoku_solve.cc": {
-                "passed": 0,
+                "passed": 400,
                 "total": 400
             },
             "Java: SudokuSolve.java": {
