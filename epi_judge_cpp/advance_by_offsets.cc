@@ -3,8 +3,16 @@
 #include "test_framework/generic_test.h"
 using std::vector;
 bool CanReachEnd(const vector<int>& max_advance_steps) {
-  // TODO - you fill in here.
-  return true;
+  auto furthest_so_far = 0;
+  auto const last_index = static_cast<int>(max_advance_steps.size()) - 1;
+  for(auto i = 0;
+      i <= furthest_so_far && furthest_so_far < last_index;
+      ++i)
+  {
+    furthest_so_far = std::max(furthest_so_far, max_advance_steps[i] + i);
+  }
+
+  return furthest_so_far >= last_index;
 }
 
 int main(int argc, char* argv[]) {
