@@ -8,10 +8,31 @@
 using std::unique_ptr;
 using std::vector;
 
+auto inorder(std::unique_ptr<BinaryTreeNode<int>>                     const & node
+            ,std::vector<const std::unique_ptr<BinaryTreeNode<int>>*>       & res)
+    -> void
+{
+    if( node == nullptr )
+        return;
+    
+    if( node->left == nullptr && node->right == nullptr )
+        res.emplace_back(&node);
+
+    inorder(node->left , res);
+    inorder(node->right, res);
+}
+
+auto create_list_of_leaves(std::unique_ptr<BinaryTreeNode<int>> const & tree)
+    -> std::vector<const std::unique_ptr<BinaryTreeNode<int>> *>
+{
+    auto result = std::vector<const std::unique_ptr<BinaryTreeNode<int>>*>{};
+    inorder(tree, result);
+    return result;
+}
+
 vector<const unique_ptr<BinaryTreeNode<int>>*> CreateListOfLeaves(
     const unique_ptr<BinaryTreeNode<int>>& tree) {
-  // TODO - you fill in here.
-  return {};
+  return create_list_of_leaves(tree);
 }
 vector<int> CreateListOfLeavesWrapper(
     TimedExecutor& executor, const unique_ptr<BinaryTreeNode<int>>& tree) {
