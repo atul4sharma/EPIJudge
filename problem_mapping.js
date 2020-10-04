@@ -228,7 +228,7 @@ problem_mapping = {
         },
         "5.04 Advancing through an array": {
             "C++: advance_by_offsets.cc": {
-                "passed": 0,
+                "passed": 2004,
                 "total": 2004
             },
             "Java: AdvanceByOffsets.java": {
@@ -930,7 +930,7 @@ problem_mapping = {
         },
         "8.05 Compute buildings with a sunset view": {
             "C++: sunset_view.cc": {
-                "passed": 0,
+                "passed": 101,
                 "total": 101
             },
             "Java: SunsetView.java": {
@@ -944,7 +944,7 @@ problem_mapping = {
         },
         "8.06 Compute binary tree nodes in order of increasing depth": {
             "C++: tree_level_order.cc": {
-                "passed": 0,
+                "passed": 3852,
                 "total": 3852
             },
             "Java: TreeLevelOrder.java": {
