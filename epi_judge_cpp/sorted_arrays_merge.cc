@@ -33,6 +33,7 @@ auto merge_vectors(std::vector<std::vector<int>> const & sorted_arrays
     return result;
 }
 
+// TODO: make this better
 vector<int> MergeSortedArrays(const vector<vector<int>>& sorted_arrays) {
   return merge_vectors(sorted_arrays, 0, sorted_arrays.size() - 1);
 }
