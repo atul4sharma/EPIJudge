@@ -5,14 +5,14 @@ using std::vector;
 
 auto max_profit(std::vector<double> const & diffs)
 {
-    auto best_sum    = std::numeric_limits<double>::min();
-    auto current_sum = static_cast<double>(0);
-    for( auto const & i : diffs)
+    auto max_profit  = std::numeric_limits<double>::min();
+    auto current_sum = double{0};
+    for(auto const & i : diffs)
     {
         current_sum = std::max(double{0}, current_sum + i);
-        best_sum    = std::max(best_sum, current_sum);
+        max_profit  = std::max(max_profit, current_sum);
     }
-    return best_sum;
+    return max_profit;
 }
 
 auto buy_and_sell_stock_once_impl(std::vector<double> const & prices)
