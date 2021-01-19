@@ -1,7 +1,19 @@
 #include "test_framework/generic_test.h"
+
+auto fib_impl(std::vector<int> & fib, int n) 
+{
+    if( n < 2 )
+        return n;
+
+    if( fib[n] == -1)
+        fib[n] = fib_impl(fib, n-1) + fib_impl(fib, n-2);
+    
+    return fib[n];
+}
+
 int Fibonacci(int n) {
-  // TODO - you fill in here.
-  return -1;
+  auto fib = std::vector<int>(n+1, -1);
+  return fib_impl(fib, n);
 }
 
 int main(int argc, char* argv[]) {
