@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <vector>
 
 #include "test_framework/generic_test.h"
@@ -5,8 +6,10 @@ using std::vector;
 
 vector<int> IntersectTwoSortedArrays(const vector<int>& A,
                                      const vector<int>& B) {
-  // TODO - you fill in here.
-  return {};
+  auto result = std::vector<int>{};
+  std::set_intersection(A.begin(), A.end(), B.begin(), B.end(), std::back_inserter(result));
+  result.erase(std::unique(result.begin(), result.end()), result.end());
+  return result;
 }
 
 int main(int argc, char* argv[]) {
