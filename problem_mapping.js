@@ -1612,7 +1612,7 @@ problem_mapping = {
     "Chapter 13: Sorting": {
         "13.01 Compute the intersection of two sorted arrays": {
             "C++: intersect_sorted_arrays.cc": {
-                "passed": 0,
+                "passed": 202,
                 "total": 202
             },
             "Java: IntersectSortedArrays.java": {
@@ -1626,7 +1626,7 @@ problem_mapping = {
         },
         "13.02 Merge two sorted arrays": {
             "C++: two_sorted_arrays_merge.cc": {
-                "passed": 0,
+                "passed": 201,
                 "total": 201
             },
             "Java: TwoSortedArraysMerge.java": {
