@@ -1654,7 +1654,7 @@ problem_mapping = {
         },
         "13.04 Remove first-name duplicates": {
             "C++: remove_duplicates.cc": {
-                "passed": 0,
+                "passed": 202,
                 "total": 202
             },
             "Java: RemoveDuplicates.java": {

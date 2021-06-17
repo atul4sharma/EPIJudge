@@ -17,7 +17,14 @@ struct Name {
   string first_name, last_name;
 };
 void EliminateDuplicate(vector<Name>* names) {
-  // TODO - you fill in here.
+  auto & names_ = *names;
+  std::sort(names_.begin(), names_.end());
+  names_.erase(std::unique(names_.begin(),
+                           names_.end(),
+                           [](Name const & a, Name const & b){
+                            return !(a < b) && !(b < a); 
+                           }),
+                names_.end());
   return;
 }
 
