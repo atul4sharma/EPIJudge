@@ -6,8 +6,39 @@
 using std::deque;
 using std::vector;
 
+bool is_flippable(int const x, int const y, bool const to_color, std::vector<deque<bool>> const & image)
+{
+    return x >= 0 && x < image.size()
+        && y >= 0 && y < image[x].size()
+        && image[x][y] != to_color;
+}
+
+void flip_color_impl(int x, int y, bool const to_color, std::vector<deque<bool>> & image)
+{
+    auto constexpr shifts = std::array<std::array<int,2>, 4>{
+         std::array<int, 2>{ 0, 1}
+        ,std::array<int, 2>{ 1, 0}
+        ,std::array<int, 2>{ 0,-1}
+        ,std::array<int, 2>{-1, 0}
+    };
+    for(auto const & shift : shifts)
+    {
+        int next_x = x + shift[0];
+        int next_y = y + shift[1];
+        if( is_flippable(next_x, next_y, to_color, image) )
+        {
+            image[next_x][next_y] = !image[next_x][next_y];
+            flip_color_impl(next_x, next_y, to_color, image);
+        }
+    }
+    return;
+}
+
 void FlipColor(int x, int y, vector<deque<bool>>* image_ptr) {
-  // TODO - you fill in here.
+  auto & image = *image_ptr;
+  image[x][y] = !image[x][y];
+  bool to_color = image[x][y];
+  flip_color_impl(x, y, to_color, image);
   return;
 }
 vector<vector<int>> FlipColorWrapper(TimedExecutor& executor, int x, int y,
