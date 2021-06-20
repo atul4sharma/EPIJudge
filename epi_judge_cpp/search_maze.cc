@@ -15,10 +15,57 @@ struct Coordinate {
 
   int x, y;
 };
+
+bool is_feasible(Coordinate const & curr
+        ,std::vector<std::vector<Color>> const & maze)
+{
+    return curr.x >= 0 && curr.x < maze.size()
+        && curr.x >= 0 && curr.y < maze[curr.x].size()
+        && maze[curr.x][curr.y] == Color::kWhite;
+}
+
+bool search_maze_helper(Coordinate const & source,
+        Coordinate const & end,
+        std::vector<std::vector<Color>> & maze,
+        std::vector<Coordinate> & path)
+{
+    if(source == end)
+        return true;
+
+    auto const shifts = std::array<std::array<int,2>, 4>{
+         std::array<int, 2>{0 ,1}
+        ,std::array<int, 2>{1 ,0}
+        ,std::array<int, 2>{-1,0}
+        ,std::array<int, 2>{0 ,-1}
+    };
+
+    for(auto const & s : shifts)
+    {
+        Coordinate next{source.x + s[0], source.y + s[1]};
+        if(is_feasible(next, maze))
+        {
+            maze[next.x][next.y] = Color::kBlack;
+            path.emplace_back(next);
+            if(search_maze_helper(next, end, maze, path))
+            {
+                return true;
+            }
+            path.pop_back();
+        }
+    }
+    return false;
+}
+
 vector<Coordinate> SearchMaze(vector<vector<Color>> maze, const Coordinate& s,
                               const Coordinate& e) {
-  // TODO - you fill in here.
-  return {};
+  auto path = std::vector<Coordinate>{};
+  maze[s.x][s.y] = Color::kBlack;
+  path.push_back(s);
+  if(!search_maze_helper(s, e, maze, path))
+  {
+      path.pop_back();
+  }
+  return path;
 }
 
 namespace test_framework {
