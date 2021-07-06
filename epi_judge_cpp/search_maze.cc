@@ -32,7 +32,7 @@ bool search_maze_helper(Coordinate const & source,
     if(source == end)
         return true;
 
-    auto const shifts = std::array<std::array<int,2>, 4>{
+    auto constexpr shifts = std::array<std::array<int,2>, 4>{
          std::array<int, 2>{0 ,1}
         ,std::array<int, 2>{1 ,0}
         ,std::array<int, 2>{-1,0}
@@ -41,7 +41,7 @@ bool search_maze_helper(Coordinate const & source,
 
     for(auto const & s : shifts)
     {
-        Coordinate next{source.x + s[0], source.y + s[1]};
+        auto const next = Coordinate{source.x + s[0], source.y + s[1]};
         if(is_feasible(next, maze))
         {
             maze[next.x][next.y] = Color::kBlack;
