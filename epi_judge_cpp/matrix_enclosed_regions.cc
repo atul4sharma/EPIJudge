@@ -7,9 +7,53 @@
 using std::string;
 using std::vector;
 
+struct Coordinate { int x, y; };
+
+void MarkBoundaryRegion(std::vector<std::vector<char>> & board, int x, int y)
+{
+    std::queue<Coordinate> q;
+    q.push(Coordinate{x,y});
+    while(!q.empty())
+    {
+        auto const vertex = q.front(); q.pop();
+        const int a = vertex.x; const int b = vertex.y;
+        if( a >= 0 && a < board.size()
+          &&
+            b >= 0 && b < board[a].size()
+          &&
+            board[a][b] == 'W')
+        {
+            board[a][b] = 'T';
+            q.emplace(Coordinate{a  ,b+1});
+            q.emplace(Coordinate{a  ,b-1});
+            q.emplace(Coordinate{a+1,b  });
+            q.emplace(Coordinate{a-1,b  });
+        }
+
+    }
+}
+
 void FillSurroundedRegions(vector<vector<char>>* board_ptr) {
-  // TODO - you fill in here.
-  return;
+    auto & board = *board_ptr;
+
+    if(board.empty())
+        return;
+
+    for(int i = 0; i < board.size(); ++i) {
+        MarkBoundaryRegion(board, i, 0);
+        MarkBoundaryRegion(board, i, board.front().size() - 1);
+    }
+
+    for(int j = 0; j < board.front().size(); ++j) {
+        MarkBoundaryRegion(board, 0, j);
+        MarkBoundaryRegion(board, board.size() - 1, j);
+    }
+
+    for(auto & row: board)
+        for(char & c : row)
+            c = c != 'T' ? 'B' : 'W';
+
+    return;
 }
 vector<vector<string>> FillSurroundedRegionsWrapper(
     TimedExecutor& executor, vector<vector<string>> board) {
