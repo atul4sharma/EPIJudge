@@ -2514,7 +2514,7 @@ problem_mapping = {
         },
         "18.05 Clone a graph": {
             "C++: graph_clone.cc": {
-                "passed": 0,
+                "passed": 91,
                 "total": 91
             },
             "Java: GraphClone.java": {
