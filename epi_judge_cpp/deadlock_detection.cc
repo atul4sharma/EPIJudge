@@ -6,13 +6,34 @@
 #include "test_framework/timed_executor.h"
 using std::vector;
 
+enum class visited { no, partially, completely};
+
 struct GraphVertex {
+  visited status;
   vector<GraphVertex*> edges;
 };
 
-bool IsDeadlocked(vector<GraphVertex>* graph) {
-  // TODO - you fill in here.
-  return true;
+bool has_cycle(GraphVertex * g)
+{
+    if( g->status == visited::partially)
+        return true;
+
+    g->status = visited::partially;
+    for(GraphVertex * v : g->edges)
+    {
+        if(v->status != visited::completely && has_cycle(v))
+                return true;
+    }
+    g->status = visited::completely;
+    return false;
+}
+
+bool IsDeadlocked(vector<GraphVertex>* graph_ptr) {
+    auto & graph = *graph_ptr;
+    using std::begin; using std::end;
+    return std::any_of(begin(graph), end(graph), [] (GraphVertex & v){
+                return v.status == visited::no && has_cycle(&v);
+            });
 }
 struct Edge {
   int from;
